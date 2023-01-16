@@ -5,20 +5,20 @@
 class Mockingio < Formula
   desc "mockingio is a mocking tool"
   homepage "https://github.com/mockingio/mockingio"
-  version "0.0.40"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mockingio/mockingio/releases/download/v0.0.40/mockingio_v0.0.40_darwin_arm64.tar.gz"
-      sha256 "e12ccdafa252e5cdb53bba0f36a01344af1ffa6cde902e0f2d1fb1ed2fd7c70e"
+      url "https://github.com/mockingio/mockingio/releases/download/v0.1.0/mockingio_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "de77829b4401d6e4478526cf45d280b359be27fe0db18c3482be810f2dfae3c3"
 
       def install
         bin.install "mockingio"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mockingio/mockingio/releases/download/v0.0.40/mockingio_v0.0.40_darwin_amd64.tar.gz"
-      sha256 "d27fc7efc556fd2da37767008920a2b86a79c8230ea8016b0631ff8f91ea34ee"
+      url "https://github.com/mockingio/mockingio/releases/download/v0.1.0/mockingio_v0.1.0_darwin_amd64.tar.gz"
+      sha256 "7a6ad1414ccd360f20d6f73ca0b975e5b041bbfd5de693a3f1325abeea411d5d"
 
       def install
         bin.install "mockingio"
@@ -27,17 +27,17 @@ class Mockingio < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mockingio/mockingio/releases/download/v0.0.40/mockingio_v0.0.40_linux_arm64.tar.gz"
-      sha256 "0eebdbd7e8b62fad9413ed67c93f3fe0f22c0260982a0ca1eb76f7ce5de42e08"
+    if Hardware::CPU.intel?
+      url "https://github.com/mockingio/mockingio/releases/download/v0.1.0/mockingio_v0.1.0_linux_amd64.tar.gz"
+      sha256 "e3c485ca6891dafa78fae11891fb3884a5177aee49a29a6971998f3d845f4808"
 
       def install
         bin.install "mockingio"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mockingio/mockingio/releases/download/v0.0.40/mockingio_v0.0.40_linux_amd64.tar.gz"
-      sha256 "3eb7ca01eaf79cb02cdd5d627a3996c455eef67cf6c39c535551765906443870"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mockingio/mockingio/releases/download/v0.1.0/mockingio_v0.1.0_linux_arm64.tar.gz"
+      sha256 "c51cac32a0963b988df231faa9becb5c2efa62e50fa20850d67e1c49e970db33"
 
       def install
         bin.install "mockingio"
